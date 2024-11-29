@@ -24,6 +24,12 @@ export default function Home() {
         locoInstance = new LocomotiveScroll.default({
           el: scrollRef.current,
           smooth: true,
+          smartphone: {
+            smooth: true, // Enables smooth scroll for smartphones
+          },
+          tablet: {
+            smooth: true, // Enables smooth scroll for tablets
+          },
           getDirection: true,
           multiplier: 1.2,
         });
