@@ -1,0 +1,91 @@
+.mini-container{
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 20px;
+}
+.collection-overlay{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 0 40px;
+}
+.overlay-text{
+    padding: 0 20px;
+font-family: var(--font-demo-reg);
+font-style: normal;
+font-weight: 700;
+font-size: 70px;
+white-space: nowrap;
+height: 80px;
+overflow-y: hidden;
+color: #362B29;
+backdrop-filter: blur(5px); /* Blurs background around text */
+z-index: 1;
+}
+.shortline{
+    width: 100px; /* Adjust length here */
+      border: 2px solid #362B29;; /* Line thickness and color */
+}
+.overlay-text-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.overlay-right{
+    justify-content: flex-end;
+}
+.overlay-text-right, .shortline-right{
+    margin-right: 50px;
+}
+.overlay-text-left, .shortline-left{
+    margin-left: 40px;
+}
+.cards-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.card{
+    flex: 1;
+position: relative;
+}
+.card-img-container{
+    width: 100%;
+}
+.card-img-container img{
+    width: 100%;
+    object-fit: cover;
+}
+.card-image-content{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    bottom: 10%;
+    display: none;
+}
+.card-image-content h4{
+    font-family: var(--font-demo-reg);
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+
+color: #FEDBD6;
+backdrop-filter: blur(5px); /* Blurs background around text */
+z-index: 1;
+}
+.card-image-content p{
+font-family: 'Unna';
+font-style: normal;
+font-weight: 400;
+font-size: 12.7121px;
+line-height: 15px;
+/* identical to box height */
+color: #FEDBD6;
+backdrop-filter: blur(5px); /* Blurs background around text */
+}
