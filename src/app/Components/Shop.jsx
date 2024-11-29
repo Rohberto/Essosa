@@ -17,7 +17,7 @@ const Shop = () => {
    spaceBetween={20}
    breakpoints={{
     320: {
-      slidesPerView: 1, // 1 slide per view for screens 320px and up
+      slidesPerView: 1.5, // 1 slide per view for screens 320px and up
       spaceBetween: 10, // 10px space between slides
     },
     768: {
@@ -29,7 +29,7 @@ const Shop = () => {
       spaceBetween: 30, // 30px space between slides
     },
   }}
-  className='swiper_container' >
+  className='swiper_container'  data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
         {
           Collections.map((collection, i) => (
             <SwiperSlide key={i} className='slider-container'>
