@@ -94,7 +94,13 @@ text-transform: uppercase;
     color: #000;
     text-transform: uppercase;
   }
-  .slide_cart{
+  .main_shop{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slide_cart, .slide_shop{
     background-color: transparent;
     color: #000;
     text-decoration: underline;

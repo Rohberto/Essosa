@@ -45,6 +45,8 @@ const Shop = () => {
         }
     </Swiper>
 
+<div className="main_shop">  <button className="slide_shop">Go to Shop</button></div>
+  
       
     </section>
   )
