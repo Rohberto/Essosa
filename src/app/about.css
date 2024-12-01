@@ -143,6 +143,7 @@ color: #fff;
     }
     .founder{
         position: static;
+        padding-top: 30px;
     }
     .aboutContentHeading{
         font-family: var(--font-demo-reg);
