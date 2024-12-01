@@ -29,7 +29,7 @@ const Shop = () => {
       spaceBetween: 30, // 30px space between slides
     },
   }}
-  className='swiper_container'  data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">
+  className='swiper_container' >
         {
           Collections.map((collection, i) => (
             <SwiperSlide key={i} className='slider-container'>
