@@ -1,0 +1,85 @@
+.order_container{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    /* Frame 13 */
+background-image: url("/mannequin.png");
+background-size: cover;
+background-position: top center;
+padding: 40px;
+}
+.order_content{
+    width: 50%;
+    padding: 40px 100px;
+}
+.order_content h1{
+    font-family: var(--font-season-reg);
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+font-size: 32px;
+line-height: 38px;
+color: #050A16;
+margin-bottom: 20px;
+}
+.order_content h4{
+    margin-bottom: 40px;
+}
+.order_content h4, .order_content p{
+    font-family: var(--font-season-reg);
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+font-size: 18px;
+line-height: 21px;
+color: #050A16;
+}
+.arrowImage{
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translateY(-70%);
+}
+.order_cards{
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 1200px) {
+    .order_content{
+        width: 50%;
+        padding: 0;
+    }
+}
+@media (max-width: 1000px) {
+    .order_content{
+        width: 100%;
+        padding: 0;
+    }
+    .order_container{
+       flex-direction: column;
+        min-height: 100vh;
+    padding: 40px;
+    }
+    .arrowImage{
+       display: none;
+    }
+    .order_cards{
+        justify-content: center;
+        padding: 20px 0;
+    }
+}
+@media (max-width: 550px) {
+    .order_container{
+    padding: 40px 20px;
+    }
+    .order_cards{
+        justify-content: center;
+        padding: 20px 0;
+    }
+    .card_img_container{
+        width: 100%;
+    }
+    .card_img_container img{
+        width: 100%;
+    }
+}

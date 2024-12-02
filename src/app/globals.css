@@ -46,6 +46,7 @@ a {
     color-scheme: dark;
   }
 }
+
 /* hero.css */
 .hero-section {
   position: relative;
@@ -274,4 +275,11 @@ cursor: pointer;
 }
 .container{
   padding-bottom: 100px;
+}
+[data-scroll-container] {
+  overflow: hidden;
+}
+
+[data-scroll-section] {
+  position: relative;
 }

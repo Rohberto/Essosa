@@ -1,38 +1,41 @@
 "use client";
-import { useEffect, useRef } from 'react';
-import dynamic from 'next/dynamic';
 
-// Dynamically import Locomotive Scroll
-const LocomotiveScroll = dynamic(() => import('locomotive-scroll'), { ssr: false });
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import LocomotiveScroll from "locomotive-scroll";
 
-export default function ClientScrollProvider({ children }) {
+gsap.registerPlugin(ScrollTrigger);
+
+const useLocoScrollTrigger = () => {
   const scrollRef = useRef(null);
-  const locoScroll = useRef(null);
 
   useEffect(() => {
-    let locoInstance;
 
-    if (scrollRef.current) {
-      import('locomotive-scroll').then((LocomotiveScroll) => {
-        locoInstance = new LocomotiveScroll.default({
-          el: scrollRef.current,
-          smooth: true,
-          getDirection: true, // Track scroll direction
-          scrollFromAnywhere: true,
-        });
+    
+    const locoScroll = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      smartphone: {
+        smooth: true,
+      },
+      tablet: {
+        smooth: true,
+      },
+      // Add other configurations as needed
+    });
 
-        locoInstance.update();
-      });
-    }
+    // Recalculate the scroll on window resize
+    const resizeHandler = () => locoScroll.update();
+    window.addEventListener('resize', resizeHandler);
 
     return () => {
-      if (locoInstance) locoInstance.destroy();
+      locoScroll.destroy();
+      window.removeEventListener('resize', resizeHandler);
     };
   }, []);
 
-  return (
-    <div ref={scrollRef} data-scroll-container>
-      {children}
-    </div>
-  );
-}
+  return scrollRef;
+};
+
+export default useLocoScrollTrigger;

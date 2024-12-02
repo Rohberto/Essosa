@@ -5,8 +5,11 @@ import "./minicollection.css";
 import "./shop.css";
 import "./about.css";
 import Navbar from "./Components/Navbar";
-import Head from 'next/head';
+import 'locomotive-scroll/dist/locomotive-scroll.css'; // Import Locomotive Scroll CSS
+import LocoLayout from "./Utils/LocoLayout";
 import ClientScrollProvider from "./Utils/locomotive";
+import "./order.css";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -59,9 +62,9 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className={`${geistSans.variable} ${geistMono.variable} ${Demo.variable} ${demoBold.variable} ${Season.variable} ${seasonBold.variable}`}>
- 
-       <Navbar/>
-        {children}
+
+       <LocoLayout>  
+       <Navbar/>{children}</LocoLayout>
      
       </body>
 

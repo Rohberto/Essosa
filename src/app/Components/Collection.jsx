@@ -1,7 +1,11 @@
-import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 import styles from '../Collections.module.css';
 
+
+
 const Collections = () => {
+  
+    
   return (
     <section className={styles.collectionsSection} data-scroll-section>
       <h2 className={styles.title}  data-scroll 
@@ -18,7 +22,7 @@ const Collections = () => {
         {/* Smaller images on the left */}
         <div className={styles.small_images_container}>
         <div className={styles.smallImages1}>
-          <div className={styles.imageWrapper }  data-scroll 
+          <div className={styles.imageWrapper } data-scroll 
   data-scroll-speed="3">
             <img src="/img1.png" alt="Dress 1"  />
           </div>

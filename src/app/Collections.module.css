@@ -74,6 +74,7 @@ letter-spacing: -0.05px;
     height: 300px;
     overflow: hidden;
     border-radius: 8px;
+    background-color: #000;
   }
   .imageWrapper img, .largeImage img{
     width: 100%;
@@ -82,7 +83,7 @@ letter-spacing: -0.05px;
   }
   
   .largeImage {
-  
+    background-color: #000;
   }
   .gallery{
     background-color: transparent;
