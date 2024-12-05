@@ -9,6 +9,7 @@ import { useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import 'locomotive-scroll/dist/locomotive-scroll.css'; // Import Locomotive Scroll CSS
 import Collections from "./Components/Collection";
+import Order from "./Components/Order";
 
 // Dynamically import Locomotive Scroll to avoid SSR issues
 const LocomotiveScroll = dynamic(() => import('locomotive-scroll'), { ssr: false });
@@ -51,6 +52,7 @@ export default function Home() {
       <Shop/>
       <About/>
       <Collections/>
+      <Order/>
     </div>
   );
 }

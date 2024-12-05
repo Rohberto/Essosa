@@ -4,6 +4,7 @@ import "./globals.css";
 import "./minicollection.css";
 import "./shop.css";
 import "./about.css";
+import "./order.css";
 import Navbar from "./Components/Navbar";
 import Head from 'next/head';
 import ClientScrollProvider from "./Utils/locomotive";
